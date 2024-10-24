@@ -1,0 +1,22 @@
+<!-- src/main/resources/templates/enviarNotificacion.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Enviar Notificación</title>
+</head>
+<body>
+    <h1>Enviar Notificación</h1>
+    <form th:action="@{/notificaciones/enviar}" method="post">
+        <label for="mensaje">Mensaje:</label>
+        <input type="text" id="mensaje" name="mensaje" required><br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required><br>
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" name="tipo" required>
+            <option value="recordatorio">Recordatorio</option>
+            <option value="confirmacion">Confirmación</option>
+        </select><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

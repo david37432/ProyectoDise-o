@@ -1,0 +1,28 @@
+<!-- src/main/resources/templates/listarNotificaciones.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Listar Notificaciones</title>
+</head>
+<body>
+    <h1>Listar Notificaciones</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Mensaje</th>
+                <th>Fecha</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="notificacion : ${notificaciones}">
+                <td th:text="${notificacion.id}"></td>
+                <td th:text="${notificacion.mensaje}"></td>
+                <td th:text="${notificacion.fecha}"></td>
+                <td th:text="${notificacion.tipo}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

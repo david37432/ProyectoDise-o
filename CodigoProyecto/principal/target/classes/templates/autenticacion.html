@@ -1,0 +1,17 @@
+<!-- src/main/resources/templates/autenticacion.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Autenticación de Usuario</title>
+</head>
+<body>
+    <h1>Autenticación de Usuario</h1>
+    <form th:action="@{/usuarios/autenticar}" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br>
+        <button type="submit">Autenticar</button>
+    </form>
+</body>
+</html>

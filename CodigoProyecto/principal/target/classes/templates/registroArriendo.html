@@ -1,0 +1,13 @@
+<!-- src/main/resources/templates/registroArriendo.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registro de Arriendo</title>
+</head>
+<body>
+    <h1>Registro de Arriendo</h1>
+    <form th:action="@{/arriendos/registrar}" method="post">
+        <label for="propiedad">Propiedad:</label>
+        <input type="text" id="propiedad" name="propiedad" required><br>
+        <label for="arrendatario">Arrendatario:</label>
+        <input type="text" id="arrendatario
